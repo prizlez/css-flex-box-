@@ -1,0 +1,140 @@
+*,
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --height: 300px;
+  --red: linear-gradient(45deg, #fa7c06, #fa8807);
+  --yello: linear-gradient(45deg, #ffc802, #f8f407);
+  --green: linear-gradient(45deg, #2cef00, #226b00);
+  --blue: linear-gradient(45deg, #00b3ff, #012f84);
+  --rainbow: linear-gradient(90deg, #00b3ff, #d40dbd, #ffb006);
+  --bg: #110423;
+  --trans: 400ms;
+}
+
+html,
+body,
+main {
+  background: var(--bg);
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+
+.main {
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+}
+
+.main .container {
+  width: 100%;
+}
+
+.main .container .content {
+  margin: 3rem;
+}
+
+.main .container .content .boxes {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: auto;
+}
+
+.main .container .content .boxes .first-boxes {
+  display: grid;
+  grid-template-areas: "a a a b b";
+  gap: 1rem;
+}
+
+.main .container .content .boxes .first-boxes .red {
+  background: var(--red);
+  grid-area: a;
+}
+
+.main .container .content .boxes .first-boxes .yello {
+  background: var(--yello);
+  grid-area: b;
+}
+
+.main .container .content .boxes .second-boxes {
+  display: grid;
+  grid-template-areas: "c d";
+  width: 100%;
+  gap: 1rem;
+}
+
+.main .container .content .boxes .second-boxes .two-box {
+  gap: 1rem;
+}
+
+.main .container .content .boxes .second-boxes .green {
+  background: var(--green);
+  grid-area: c;
+}
+
+.main .container .content .boxes .second-boxes .blue {
+  background: var(--blue);
+  grid-area: d;
+  height: 100px;
+}
+
+.main .container .content .boxes .second-boxes .blue-2 {
+  background: var(--blue);
+  grid-area: e;
+  height: 180px;
+  margin-top: 20px;
+}
+
+.main .container .content .boxes .box {
+  height: var(--height);
+}
+
+.main .footer {
+  width: 100%;
+  transition: var(--trans);
+  position: absolute;
+  bottom: 0;
+}
+
+.main .footer .word {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-family: rajdhani;
+  color: transparent;
+  font-weight: 900;
+  text-shadow: 1px 1px 1px rgba(47, 4, 71, 0.822);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-color: #9e33dc;
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .main .footer {
+    transition: var(--trans);
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .main .footer {
+    transition: var(--trans);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+}
+
+@media (max-width: 500px) {
+  .main .footer {
+    font-size: 5vw;
+  }
+}
+
